@@ -701,7 +701,90 @@
             <div class="card-header">
               <div class="d-flex justify-content-between">
                 <h6>Website</h6>
-                <button class="btn btn-primary"><i class="fa fa-plus me-2"></i>Website</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newWebsiteModal"><i
+                    class="fa fa-plus me-2"></i>Website</button>
+                <div class="modal fade" id="newWebsiteModal" tabindex="-1" aria-labelledby="newWebsiteModal"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-xl"> <!-- modal-sm for small size -->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">New Website Details</h5>
+                        <button type="button" class="btn-close bg-dark" data-bs-dismiss="modal"
+                          aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="row mb-4">
+                            <div class="col-6">
+                              <label for="" class="form-label text-sm">Name</label>
+                              <input type="text" class="form-control" placeholder="Enter Name" required>
+                            </div>
+                            <div class="col-6">
+                              <label for="" class="form-label text-sm">URL</label>
+                              <input type="text" class="form-control" placeholder="Enter URL" required>
+                            </div>
+                          </div>
+
+                          <div class="row mb-4">
+                            <div class="col-4">
+                              <label for="" class="form-label text-sm">Monthly Traffic</label>
+                              <input type="text" name="" id="" class="form-control" placeholder="Enter Monthly Traffic"
+                                required>
+                            </div>
+                            <div class="col-4">
+                              <label for="" class="form-label text-sm">Monthly Page Views</label>
+                              <input type="text" name="" id="" class="form-control"
+                                placeholder="Enter Monthly Page Views" required>
+                            </div>
+                            <div class="col-4">
+                              <label for="" class="form-label text-sm">Country</label>
+                              <select name="" id="" class="form-select">
+                                <option value="" disabled selected>Select Country</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="row mb-4">
+                            <div class="col-12">
+
+                              <label for="">Website Type</label>
+                              <select name="" id="" class="form-control" multiple="multiple">
+                                <option value="">Website Type</option>
+                                <option value="">Website Type</option>
+                                <option value="">Website Type</option>
+                                <option value="">Website Type</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row mb-4">
+                            <div class="col-12">
+
+                              <label for="">Category (Max 4)</label>
+                              <select name="" id="" class="form-control" multiple="multiple">
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                                <option value="">Category</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="row mb-4">
+                            <div class="col-12"><textarea name="" id="" placeholder="Website Introduction Here" required
+                                class="form-control"></textarea></div>
+                          </div>
+
+                          <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <!-- <p>This is your projects tab content.</p> -->
               </div>
             </div>
@@ -739,7 +822,7 @@
                           <div class="modal-content">
                             <div class="modal-header">
                               <h5 class="modal-title" id="editModalLabel">Edit Website Details</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                              <button type="button" class="btn-close bg-dark" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -805,7 +888,8 @@
                                 </div>
 
                                 <div class="row mb-4">
-                                  <div class="col-12"><textarea name="" id="" placeholder="Website Introduction Here" required class="form-control"></textarea></div>
+                                  <div class="col-12"><textarea name="" id="" placeholder="Website Introduction Here"
+                                      required class="form-control"></textarea></div>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary w-100">Save Changes</button>
