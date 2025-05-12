@@ -406,18 +406,9 @@
               </div>
             </div>
             <div class="d-flex align-items-center">
-        <li class="nav-item" role="presentation">
-              <a href="javascript:;" class="btn btn-outline-white mb-0 btn-sm" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
-            type="button" role="tab" aria-controls="settings" aria-selected="true">Billing</a>
-        </li>
-        <li class="nav-item" role="presentation">
-              <a href="javascript:;" class="btn btn-outline-white mb-0 mx-1 btn-sm" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-            role="tab" aria-controls="profile" aria-selected="false">Payments</a>
-        </li>
-        <li class="nav-item" role="presentation">
-              <a href="javascript:;" class="btn btn-outline-white mb-0 btn-sm" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button"
-            role="tab" aria-controls="projects" aria-selected="false">Invoices</a>
-        </li>
+              <a href="javascript:;" class="btn btn-outline-white mb-0 btn-sm">Billing</a>
+              <a href="javascript:;" class="btn btn-outline-white mb-0 mx-1 btn-sm">Payments</a>
+              <a href="javascript:;" class="btn btn-outline-white mb-0 btn-sm">Invoices</a>
             </div>
           </div>
         </div>
@@ -428,22 +419,30 @@
     <div class="container mt-4">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
-            type="button" role="tab" aria-controls="settings" aria-selected="true">Basic Information</button>
+          <button class="nav-link" id="information-tab" data-bs-toggle="tab" data-bs-target="#information" type="button"
+            role="tab" aria-controls="information" aria-selected="false">Basic Information</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-            role="tab" aria-controls="profile" aria-selected="false">Company</button>
+          <button class="nav-link " id="company-tab" data-bs-toggle="tab" data-bs-target="#company" type="button"
+            role="tab" aria-controls="company" aria-selected="false">Company</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects" type="button"
-            role="tab" aria-controls="projects" aria-selected="false">Projects</button>
+          <button class="nav-link active" id="websites-tab" data-bs-toggle="tab" data-bs-target="#websites"
+            type="button" role="tab" aria-controls="websites" aria-selected="true">Websites</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="billing-tab" data-bs-toggle="tab" data-bs-target="#billing" type="button"
+            role="tab" aria-controls="billing" aria-selected="false">Billing</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab"
+            aria-controls="login" aria-selected="false">Login Info</button>
         </li>
       </ul>
 
       <!-- Tabs Content -->
       <div class="tab-content mt-3" id="myTabContent">
-        <div class="tab-pane fade show active" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <div class="tab-pane fade " id="information" role="tabpanel" aria-labelledby="information-tab">
           <div class="card">
             <div class="card-header">
               <h6 class="text-sm">Basic Information</h6>
@@ -453,168 +452,400 @@
               <div class="col-12">
                 <form action="#" method="post">
                   <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Name</label>
+                    <div class="col-6">
+                      <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="name" id="name" placeholder="Enter Your Name" class="form-control"
+                        required>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <input type="text" name="name" id="name" placeholder="Enter Your Name" class="form-control" required>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Bio</label>
+                    </div>
+                    <div class="col-6">
+                      <textarea name="" id="" class="form-control" required
+                        placeholder="Write your bio here.."></textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Bio</label>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Target Region</label>
+                    </div>
+                    <div class="col-6">
+                      <select name="" id="" class="form-select" required>
+                        <option value="" selected disabled>Select Country..</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <textarea name="" id="" class="form-control" required placeholder="Write your bio here.."></textarea>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Language</label>
+                    </div>
+                    <div class="col-6">
+                      <select name="" id="" class="form-select" required>
+                        <option value="" selected disabled>Select Language..</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Target Region</label>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Username</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="name" id="name" placeholder="u.s.e.r.n.a.m.e" class="form-control"
+                        required>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <select name="" id="" class="form-select" required>
-                      <option value="" selected disabled>Select Country..</option>
-                    </select>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Gender</label>
+                    </div>
+                    <div class="col-6">
+                      <select name="" id="" class="form-select" required>
+                        <option value="" selected disabled>Select Gender..</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Language</label>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Date Of Birth</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="date" name="" id="" class="form-control" required>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <select name="" id="" class="form-select" required>
-                      <option value="" selected disabled>Select Language..</option>
-                    </select>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Address</label>
+                    </div>
+                    <div class="col-6">
+                      <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control"
+                        required></textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Username</label>
-                  </div>
-                  <div class="col-6">
-                    <input type="text" name="name" id="name" placeholder="u.s.e.r.n.a.m.e" class="form-control" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Gender</label>
-                  </div>
-                  <div class="col-6">
-                    <select name="" id="" class="form-select" required>
-                      <option value="" selected disabled>Select Gender..</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Date Of Birth</label>
-                  </div>
-                  <div class="col-6">
-                    <input type="date" name="" id="" class="form-control" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Address</label>
-                  </div>
-                  <div class="col-6">
-                    <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control" required></textarea>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Country/State/City</label>
-                  </div>
-                  <div class="col-6">
-                    <div class="row">
-                      <div class="col-4">
-                        <select name="" class="form-select" required id="">
-                          <option disabled selected value="">Select Country..</option>
-                        </select>
-                      </div>
-                      <div class="col-4">
-                        <select name="" class="form-select" required id="">
-                          <option disabled selected value="">Select State..</option>
-                        </select>
-                      </div>
-                      <div class="col-4">
-                        <select name="" class="form-select" required id="">
-                          <option disabled selected value="">Select City..</option>
-                        </select>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Country/State/City</label>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col-4">
+                          <select name="" class="form-select" required id="">
+                            <option disabled selected value="">Select Country..</option>
+                          </select>
+                        </div>
+                        <div class="col-4">
+                          <select name="" class="form-select" required id="">
+                            <option disabled selected value="">Select State..</option>
+                          </select>
+                        </div>
+                        <div class="col-4">
+                          <select name="" class="form-select" required id="">
+                            <option disabled selected value="">Select City..</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="name" class="form-label">Media Kit</label>
-                  </div>
-                  <div class="col-6">
-                    <input type="file" name="" id="" class="form-control" required>
-                  </div>
-                </div>
 
-                <div class="row mb-3">
-                  <div class="col-6">
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label">Media Kit</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="file" name="" id="" class="form-control" required>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <table class="table table-responsive">
-                      <thead class="bg-dark">
-                        <tr>
-                          <th class="text-center text-xs">Name</th>
-                          <th class="text-center text-xs">Size</th>
-                          <th class="text-center text-xs"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td colspan="3" class="text-center text-xs">No Media Kits Found</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
 
-                <div class="row mb-3">
-                  <div class="col-6">
-                    <label for="" class="form-label">Upload Image</label>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                    </div>
+                    <div class="col-6">
+                      <table class="table table-responsive">
+                        <thead class="bg-dark">
+                          <tr>
+                            <th class="text-center text-xs">Name</th>
+                            <th class="text-center text-xs">Size</th>
+                            <th class="text-center text-xs"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colspan="3" class="text-center text-xs">No Media Kits Found</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  <div class="col-6">
-                    <input type="file" name="" accept="image/*" id="" class="form-control" required>
-                  </div>
-                </div>
 
-                <button type="submit" class="btn btn-primary mb-3">Update Profile!</button>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="" class="form-label">Upload Image</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="file" name="" accept="image/*" id="" class="form-control" required>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary mb-3">Update Profile!</button>
                 </form>
               </div>
-            
+
             </div>
 
           </div>
         </div>
-      </div>
 
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <div class="card">
-          <div class="card-header">
-            <h6>Company</h6>
-            <p>This is your profile information tab content.</p>
+
+
+        <div class="tab-pane fade" id="company" role="tabpanel" aria-labelledby="company-tab">
+          <div class="card">
+            <div class="card-header">
+              <h6>Company</h6>
+              <p>This is your company tab content.</p>
+            </div>
+            <hr>
+            <div class="card-body">
+
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="name" class="form-label">Company Name</label>
+                </div>
+                <div class="col-6">
+                  <input type="text" name="name" id="name" placeholder="Company Name Here." class="form-control"
+                    required>
+                </div>
+              </div>
+
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="name" class="form-label">Legal Entity Type</label>
+                </div>
+                <div class="col-6">
+                  <select name="" id="" class="form-select" required>
+                    <option value="" selected disabled>Select Legal Entity Type..</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="name" class="form-label">Country/State/City</label>
+                </div>
+                <div class="col-6">
+                  <div class="row">
+                    <div class="col-4">
+                      <select name="" class="form-select" required id="">
+                        <option disabled selected value="">Select Country..</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <select name="" class="form-select" required id="">
+                        <option disabled selected value="">Select State..</option>
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <select name="" class="form-select" required id="">
+                        <option disabled selected value="">Select City..</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="name" class="form-label">Address Line 1</label>
+                </div>
+                <div class="col-6">
+                  <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control"
+                    required></textarea>
+                </div>
+              </div>
+
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="name" class="form-label">Company Contact</label>
+                </div>
+                <div class="col-6">
+                  <input type="text" name="name" id="name" placeholder="(555) 123-4567" class="form-control" required>
+                </div>
+              </div>
+
+
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label for="name" class="form-label">Address Line 2</label>
+                </div>
+                <div class="col-6">
+                  <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control"
+                    required></textarea>
+                </div>
+              </div>
+
+              <button class="btn btn-primary mb-3">Update</button>
+            </div>
           </div>
-          <hr>
+        </div>
+
+
+
+        <div class="tab-pane fade show active" id="websites" role="tabpanel" aria-labelledby="websites-tab">
+          <div class="card">
+            <div class="card-header">
+              <div class="d-flex justify-content-between">
+                <h6>Website</h6>
+                <button class="btn btn-primary"><i class="fa fa-plus me-2"></i>Website</button>
+                <!-- <p>This is your projects tab content.</p> -->
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="col-12 mb-4">
+                <table class="table table-responsive table-hover">
+                  <thead class="bg-dark">
+                    <tr>
+                      <th class="text-center text-xs text-uppercase">Name</th>
+                      <th class="text-center text-xs text-uppercase">type</th>
+                      <th class="text-center text-xs text-uppercase">category</th>
+                      <th class="text-center text-xs text-uppercase">last updated</th>
+                      <th class="text-center text-xs text-uppercase">status</th>
+                      <th class="text-center text-xs text-uppercase">action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-xs text-center"><a href="https://bajideals.com" class="nav-link">bajideals.com</a>
+                      </td>
+                      <td class="text-xs text-center">Coupon / Deals, Content / Blogs / Reviews</td>
+                      <td class="text-xs text-center">Other</td>
+                      <td class="text-xs text-center">02/26/2025</td>
+                      <td class="text-xs text-center"><span class="badge bg-success">Active</span></td>
+                      <td class="text-xs text-center">
+                        <span class="badge bg-secondary cursor-pointer" data-bs-toggle="modal"
+                          data-bs-target="#editModal">
+                          Edit
+                        </span>
+                      </td>
+                      <!-- Edit Modal -->
+                      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-xl"> <!-- modal-sm for small size -->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="editModalLabel">Edit Website Details</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="row mb-4">
+                                  <div class="col-6">
+                                    <label for="" class="form-label text-sm">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Name" required>
+                                  </div>
+                                  <div class="col-6">
+                                    <label for="" class="form-label text-sm">URL</label>
+                                    <input type="text" class="form-control" placeholder="Enter URL" required>
+                                  </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                  <div class="col-4">
+                                    <label for="" class="form-label text-sm">Monthly Traffic</label>
+                                    <input type="text" name="" id="" class="form-control"
+                                      placeholder="Enter Monthly Traffic" required>
+                                  </div>
+                                  <div class="col-4">
+                                    <label for="" class="form-label text-sm">Monthly Page Views</label>
+                                    <input type="text" name="" id="" class="form-control"
+                                      placeholder="Enter Monthly Page Views" required>
+                                  </div>
+                                  <div class="col-4">
+                                    <label for="" class="form-label text-sm">Country</label>
+                                    <select name="" id="" class="form-select">
+                                      <option value="" disabled selected>Select Country</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                  <div class="col-12">
+
+                                    <label for="">Website Type</label>
+                                    <select name="" id="" class="form-control" multiple="multiple">
+                                      <option value="">Website Type</option>
+                                      <option value="">Website Type</option>
+                                      <option value="">Website Type</option>
+                                      <option value="">Website Type</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="row mb-4">
+                                  <div class="col-12">
+
+                                    <label for="">Category (Max 4)</label>
+                                    <select name="" id="" class="form-control" multiple="multiple">
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                      <option value="">Category</option>
+                                    </select>
+                                  </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                  <div class="col-12"><textarea name="" id="" placeholder="Website Introduction Here" required class="form-control"></textarea></div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+          <div class="card">
+            <div class="card-body">
+              <h6>Billing</h6>
+              <p>This is your projects tab content.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
+          <div class="card">
+            <div class="card-body">
+              <h6>Login</h6>
+              <p>This is your projects tab content.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
-        <div class="card">
-          <div class="card-body">
-            <h6>Projects</h6>
-            <p>This is your projects tab content.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
