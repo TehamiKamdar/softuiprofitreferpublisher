@@ -36,6 +36,27 @@
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
+<style>
+  .payment-option {
+    margin-bottom: 1rem;
+  }
+
+  .payment-label {
+    display: flex;
+    padding: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #f9f9f9;
+  }
+
+  .payment-option input:checked+.payment-label {
+    border-color: #007bff;
+    background-color: #e7f1ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+  }
+</style>
 
 <body class="g-sidenav-show bg-gray-100">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
@@ -404,7 +425,7 @@
                   CEO / Co-Founder
                 </p>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
@@ -412,32 +433,39 @@
 
     <!-- Tabs Navigation -->
     <div class="container mt-4">
-      <ul class="nav " id="myTab" role="tablist">
+      <ul class="nav" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="btn btn-outline-dark mb-0 btn-sm active" id="information-tab" data-bs-toggle="tab" data-bs-target="#information" type="button"
-            role="tab" aria-controls="information" aria-selected="false">Basic Information</button>
+          <button class="btn btn-outline-dark mb-0 btn-sm" id="information-tab" data-bs-toggle="tab"
+            data-bs-target="#information" type="button" role="tab" aria-controls="information"
+            aria-selected="false">Basic Information</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="btn btn-outline-dark mb-0 mx-1 btn-sm " id="company-tab" data-bs-toggle="tab" data-bs-target="#company" type="button"
-            role="tab" aria-controls="company" aria-selected="false">Company</button>
+          <button class="btn btn-outline-dark mb-0 mx-1 btn-sm" id="company-tab" data-bs-toggle="tab"
+            data-bs-target="#company" type="button" role="tab" aria-controls="company"
+            aria-selected="false">Company</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="btn btn-outline-dark mb-0 btn-sm" id="websites-tab" data-bs-toggle="tab" data-bs-target="#websites"
-            type="button" role="tab" aria-controls="websites" aria-selected="true">Websites</button>
+          <button class="btn btn-outline-dark mb-0 btn-sm" id="websites-tab" data-bs-toggle="tab"
+            data-bs-target="#websites" type="button" role="tab" aria-controls="websites"
+            aria-selected="true">Websites</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="btn btn-outline-dark mb-0  mx-1 btn-sm" id="billing-tab" data-bs-toggle="tab" data-bs-target="#billing" type="button"
-            role="tab" aria-controls="billing" aria-selected="false">Billing</button>
+          <button class="btn btn-outline-dark mb-0  mx-1 btn-sm active" id="billing-tab" data-bs-toggle="tab"
+            data-bs-target="#billing" type="button" role="tab" aria-controls="billing"
+            aria-selected="false">Billing</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="btn btn-outline-dark mb-0 btn-sm" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab"
-            aria-controls="login" aria-selected="false">Login Info</button>
+          <button class="btn btn-outline-dark mb-0 btn-sm" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+            type="button" role="tab" aria-controls="login" aria-selected="false">Login Info</button>
         </li>
       </ul>
 
       <!-- Tabs Content -->
       <div class="tab-content mt-3" id="myTabContent">
-        <div class="tab-pane fade show active" id="information" role="tabpanel" aria-labelledby="information-tab">
+
+
+        <!-- Basic Information Tab -->
+        <div class="tab-pane fade" id="information" role="tabpanel" aria-labelledby="information-tab">
           <div class="card">
             <div class="card-header">
               <h6 class="text-sm">Basic Information</h6>
@@ -448,7 +476,7 @@
                 <form action="#" method="post">
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Name</label>
+                      <label for="name" class="form-label text-sm">Name</label>
                     </div>
                     <div class="col-6">
                       <input type="text" name="name" id="name" placeholder="Enter Your Name" class="form-control"
@@ -457,7 +485,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Bio</label>
+                      <label for="name" class="form-label text-sm">Bio</label>
                     </div>
                     <div class="col-6">
                       <textarea name="" id="" class="form-control" required
@@ -466,7 +494,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Target Region</label>
+                      <label for="name" class="form-label text-sm">Target Region</label>
                     </div>
                     <div class="col-6">
                       <select name="" id="" class="form-select" required>
@@ -476,7 +504,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Language</label>
+                      <label for="name" class="form-label text-sm">Language</label>
                     </div>
                     <div class="col-6">
                       <select name="" id="" class="form-select" required>
@@ -486,7 +514,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Username</label>
+                      <label for="name" class="form-label text-sm">Username</label>
                     </div>
                     <div class="col-6">
                       <input type="text" name="name" id="name" placeholder="u.s.e.r.n.a.m.e" class="form-control"
@@ -495,7 +523,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Gender</label>
+                      <label for="name" class="form-label text-sm">Gender</label>
                     </div>
                     <div class="col-6">
                       <select name="" id="" class="form-select" required>
@@ -505,7 +533,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Date Of Birth</label>
+                      <label for="name" class="form-label text-sm">Date Of Birth</label>
                     </div>
                     <div class="col-6">
                       <input type="date" name="" id="" class="form-control" required>
@@ -513,7 +541,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Address</label>
+                      <label for="name" class="form-label text-sm">Address</label>
                     </div>
                     <div class="col-6">
                       <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control"
@@ -522,7 +550,7 @@
                   </div>
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Country/State/City</label>
+                      <label for="name" class="form-label text-sm">Country/State/City</label>
                     </div>
                     <div class="col-6">
                       <div class="row">
@@ -548,7 +576,7 @@
 
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="name" class="form-label">Media Kit</label>
+                      <label for="name" class="form-label text-sm">Media Kit</label>
                     </div>
                     <div class="col-6">
                       <input type="file" name="" id="" class="form-control" required>
@@ -578,7 +606,7 @@
 
                   <div class="row mb-3">
                     <div class="col-6">
-                      <label for="" class="form-label">Upload Image</label>
+                      <label for="" class="form-label text-sm">Upload Image</label>
                     </div>
                     <div class="col-6">
                       <input type="file" name="" accept="image/*" id="" class="form-control" required>
@@ -595,7 +623,7 @@
         </div>
 
 
-
+        <!-- Company Tab -->
         <div class="tab-pane fade" id="company" role="tabpanel" aria-labelledby="company-tab">
           <div class="card">
             <div class="card-header">
@@ -608,7 +636,7 @@
 
               <div class="row mb-3">
                 <div class="col-6">
-                  <label for="name" class="form-label">Company Name</label>
+                  <label for="name" class="form-label text-sm">Company Name</label>
                 </div>
                 <div class="col-6">
                   <input type="text" name="name" id="name" placeholder="Company Name Here." class="form-control"
@@ -619,7 +647,7 @@
 
               <div class="row mb-3">
                 <div class="col-6">
-                  <label for="name" class="form-label">Legal Entity Type</label>
+                  <label for="name" class="form-label text-sm">Legal Entity Type</label>
                 </div>
                 <div class="col-6">
                   <select name="" id="" class="form-select" required>
@@ -630,7 +658,7 @@
 
               <div class="row mb-3">
                 <div class="col-6">
-                  <label for="name" class="form-label">Country/State/City</label>
+                  <label for="name" class="form-label text-sm">Country/State/City</label>
                 </div>
                 <div class="col-6">
                   <div class="row">
@@ -655,7 +683,7 @@
 
               <div class="row mb-3">
                 <div class="col-6">
-                  <label for="name" class="form-label">Address Line 1</label>
+                  <label for="name" class="form-label text-sm">Address Line 1</label>
                 </div>
                 <div class="col-6">
                   <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control"
@@ -666,7 +694,7 @@
 
               <div class="row mb-3">
                 <div class="col-6">
-                  <label for="name" class="form-label">Company Contact</label>
+                  <label for="name" class="form-label text-sm">Company Contact</label>
                 </div>
                 <div class="col-6">
                   <input type="text" name="name" id="name" placeholder="(555) 123-4567" class="form-control" required>
@@ -676,7 +704,7 @@
 
               <div class="row mb-3">
                 <div class="col-6">
-                  <label for="name" class="form-label">Address Line 2</label>
+                  <label for="name" class="form-label text-sm">Address Line 2</label>
                 </div>
                 <div class="col-6">
                   <textarea name="" id="" placeholder="Write Your Address Here.." class="form-control"
@@ -690,7 +718,7 @@
         </div>
 
 
-
+        <!-- Websites Tab -->
         <div class="tab-pane fade" id="websites" role="tabpanel" aria-labelledby="websites-tab">
           <div class="card">
             <div class="card-header">
@@ -903,29 +931,208 @@
         </div>
 
 
-
-        <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
-          <div class="card">
-            <div class="card-body">
-              <h6>Billing</h6>
-              <p>This is your projects tab content.</p>
+        <!-- Billing Tab -->
+        <div class="tab-pane fade show active" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+          <div class="card mb-4">
+            <div class="card-header">
+              <h6>Billing Information</h6>
             </div>
+            <hr>
+            <form action="#" method="post">
+              <div class="card-body border-top">
+                <div class="col-12">
+
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label text-sm">Billing Name</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="name" id="name" placeholder="Enter Your Billing Name"
+                        class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label text-sm">Billing Phone</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="name" id="name" placeholder="Enter Your Billing Phone"
+                        class="form-control" required>
+                    </div>
+                  </div>
+
+
+
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label text-sm">Billing Address</label>
+                    </div>
+                    <div class="col-6">
+                      <textarea name="" id="" placeholder="Write Your Billing Address Here.." class="form-control"
+                        required></textarea>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label text-sm">Country/State/City</label>
+                    </div>
+                    <div class="col-6">
+                      <div class="row">
+                        <div class="col-4">
+                          <select name="" class="form-select" required id="">
+                            <option disabled selected value="">Select Country..</option>
+                          </select>
+                        </div>
+                        <div class="col-4">
+                          <select name="" class="form-select" required id="">
+                            <option disabled selected value="">Select State..</option>
+                          </select>
+                        </div>
+                        <div class="col-4">
+                          <select name="" class="form-select" required id="">
+                            <option disabled selected value="">Select City..</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="card-body border-top">
+                <div class="col-12">
+
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label text-sm">Company Registration Number</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="name" id="name" placeholder="Enter Your Company Registration Number"
+                        class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-6">
+                      <label for="name" class="form-label text-sm">TAX/VAT Number</label>
+                    </div>
+                    <div class="col-6">
+                      <input type="text" name="name" id="name" placeholder="Enter Your TAX/VAT Number"
+                        class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer border-top">
+                <div class="d-flex justify-content-end"><button type="submit"
+                    class="btn btn-primary mb-3">Update</button></div>
+              </div>
+            </form>
+
+
+
           </div>
-        </div>
 
+          <!-- Billing Content End -->
 
-
-        <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
-          <div class="card">
-            <div class="card-body">
-              <h6>Login</h6>
-              <p>This is your projects tab content.</p>
+          <div class="card mb-4">
+            <div class="card-header">
+              <h6>Payment Information</h6>
+              <!-- <p class="text-xs">Select your active payment method where you want to withdraw funds.</p> -->
             </div>
+            <form action="" method="post">
+
+              <div class="card-body border-top">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-6">
+                      <label for="Frequency" class="form-label">Payment Frequency</label>
+                      <select name="Frequency" id="" class="form-select">
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="">Monthly</option>
+                        <option value="">Every 45 Days</option>
+                      </select>
+                    </div>
+                    <div class="col-6">
+                      <label for="Threshold" class="form-label">Payment Threshold</label>
+                      <select name="Threshold" id="" class="form-select">
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="100">$100</option>
+                        <option value="500">$500</option>
+                        <option value="1000">$1000</option>
+                        <option value="2500">$2500</option>
+                        <option value="5000">$5000</option>
+                        <option value="10000">$10000</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card-body border-top">
+                <h6>Payment Methods</h6>
+                <p class="text-xs">Select your active payment method where you want to withdraw funds.</p>
+                <div class="col-12">
+                  <form>
+                    <div class="payment-option">
+                      <input type="radio" id="bank" name="payment" value="bank" hidden>
+                      <label for="bank" class="payment-label d-flex align-items-center">
+                        <i class="fas fa-university fa-2x me-3 text-primary"></i>
+                        <div>
+                          <strong>Bank Transfer</strong>
+                          <div class="text-muted">Transfer via your bank account</div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="payment-option">
+                      <input type="radio" id="paypal" name="payment" value="paypal" hidden>
+                      <label for="paypal" class="payment-label d-flex align-items-center">
+                        <i class="fab fa-paypal fa-2x me-3 text-info"></i>
+                        <div>
+                          <strong>PayPal</strong>
+                          <div class="text-muted">Secure online payments</div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="payment-option">
+                      <input type="radio" id="payoneer" name="payment" value="payoneer" hidden>
+                      <label for="payoneer" class="payment-label d-flex align-items-center">
+                        <i class="fas fa-money-check-alt fa-2x me-3 text-warning"></i>
+                        <div>
+                          <strong>Payoneer</strong>
+                          <div class="text-muted">Fast international transfers</div>
+                        </div>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <div class="d-flex justify-content-end"><button type="submit" class="btn btn-primary mb-3">Save</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
+
+      <!-- Login Info Tab -->
+      <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
+        <div class="card">
+          <div class="card-body">
+            <h6>Login</h6>
+            <p>This is your projects tab content.</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+  </div>
   </div>
 
 
