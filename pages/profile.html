@@ -354,25 +354,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./ad-space.html">
-                  <span class="sidenav-mini-icon"> </span>
-                  <span class="sidenav-normal"> Ad Space </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./billing.html">
-                  <span class="sidenav-mini-icon"> </span>
-                  <span class="sidenav-normal"> Payments </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./account-settings.html">
-                  <span class="sidenav-mini-icon"> </span>
-                  <span class="sidenav-normal"> Settings </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../pages/all-advertisers.html">
+                <a class="nav-link" href="#">
                   <span class="sidenav-mini-icon"> </span>
                   <span class="sidenav-normal"> Logout </span>
                 </a>
@@ -451,8 +433,8 @@
         </li>
         <li class="nav-item" role="presentation">
           <button class="btn btn-outline-dark mb-0  mx-1 btn-sm" id="billing-tab" data-bs-toggle="tab"
-            data-bs-target="#billing" type="button" role="tab" aria-controls="billing"
-            aria-selected="false">Billing</button>
+            data-bs-target="#billing" type="button" role="tab" aria-controls="billing" aria-selected="false">Billing &
+            Payments</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="btn btn-outline-dark mb-0 btn-sm" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
@@ -1172,7 +1154,8 @@
                             <label for="" class="form-label text-sm">Current Password</label>
                           </div>
                           <div class="col-8">
-                            <input type="password" name="" id="" placeholder="Enter Current Password" class="form-control" required>
+                            <input type="password" name="" id="" placeholder="Enter Current Password"
+                              class="form-control" required>
                           </div>
                         </div>
                       </div>
@@ -1183,7 +1166,8 @@
                             <label for="" class="form-label text-sm">New Password</label>
                           </div>
                           <div class="col-8">
-                            <input type="password" name="" id="" placeholder="Enter New Password" class="form-control" required>
+                            <input type="password" name="" id="" placeholder="Enter New Password" class="form-control"
+                              required>
                           </div>
                         </div>
                       </div>
@@ -1194,7 +1178,8 @@
                             <label for="" class="form-label text-sm">Confirm New Password</label>
                           </div>
                           <div class="col-8">
-                            <input type="password" name="" id="" placeholder="Enter Confirm New Password" class="form-control" required>
+                            <input type="password" name="" id="" placeholder="Enter Confirm New Password"
+                              class="form-control" required>
                           </div>
                         </div>
                       </div>
@@ -1299,6 +1284,15 @@
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+
+  <script>
+    function activateTab(tabId) {
+      const triggerEl = document.getElementById(tabId);
+      const tab = new bootstrap.Tab(triggerEl);
+      tab.show();
+    }
+  </script>
+
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
