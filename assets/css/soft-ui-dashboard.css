@@ -98,7 +98,7 @@
   --bs-link-color: #f97316;
   --bs-link-color-rgb: 249, 115, 22;
   --bs-link-decoration: none;
-  --bs-link-hover-color: rgb(189.6171548117, 80.5669456067, 4.8828451883);
+  --bs-link-hover-color: #f97316;
   --bs-link-hover-color-rgb: 190, 81, 5;
   --bs-link-hover-decoration: none;
   --bs-code-color: #ec4899;
@@ -2578,16 +2578,16 @@ progress {
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: #71717a;
+  --bs-table-color: #535353;
   --bs-table-bg: transparent;
   --bs-table-border-color: #e3e3e7;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #71717a;
-  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: #71717a;
-  --bs-table-active-bg: #f79316;
-  --bs-table-hover-color: #ffff;
-  --bs-table-hover-bg: #f79316;
+  --bs-table-striped-color: #535353;
+  --bs-table-striped-bg: #dadada;
+  --bs-table-active-color: #535353;
+  --bs-table-active-bg: #ffbb68;
+  --bs-table-hover-color: #535353;
+  --bs-table-hover-bg: #ffdcb0;
   width: 100%;
   margin-bottom: 1rem;
   vertical-align: top;
@@ -4758,7 +4758,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--bs-nav-link-hover-color);
+  color: #f97316;
 }
 
 .nav-link:focus-visible {
@@ -5892,6 +5892,13 @@ fieldset:disabled .btn {
 
 .badge:empty {
   display: none;
+}
+
+.badge-sm {
+  font-size: 0.7rem;
+  padding: 0.25em 0.4em;
+  line-height: 1;
+  color:rgb(11, 128, 0);
 }
 
 .btn .badge {
@@ -23468,7 +23475,7 @@ hr.horizontal.gray-light {
 }
 
 .border-dashed {
-  border-style: dashed;
+  border-style: dashed !important;
 }
 
 .z-index-sticky {

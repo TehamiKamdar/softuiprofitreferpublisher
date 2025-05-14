@@ -90,6 +90,11 @@
     margin-top: 1rem;
     /* adjust as needed */
   }
+  .btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;  /* Ensures no scaling on click */
+}
 </style>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -529,11 +534,35 @@
         <div class="col-lg-12">
           <div class="card">
             <div class="card-header bg-white text-white">
-              <h6>Advertisers Information</h6>
+              <h6>Transactions</h6>
             </div>
+            <!-- Controls: Date Range + Export Button -->
+            <div class="col-12">
+              <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
+                <div class="col-4">
+                  <select id="date-range" class="form-select form-select-sm">
+                    <option value="" selected>Select Date Range</option>
+                    <option value="today">Today</option>
+                    <option value="yesterday">Yesterday</option>
+                    <option value="last_7_days">Last 7 Days</option>
+                    <option value="last_30_days">Last 30 Days</option>
+                    <option value="this_month">This Month</option>
+                    <option value="last_month">Last Month</option>
+                    <option value="current_year">Current Year</option>
+                    <option value="previous_year">Previous Year</option>
+                  </select>
+                </div>
+
+                  <button class="btn btn-sm btn-outline-success">
+                    <i class="fa fa-upload me-2"></i>Export
+                  </button>
+              </div>
+            </div>
+
             <div class="card-body">
+              <!-- Table -->
               <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-striped table-hover">
                   <thead class="bg-dark text-white">
                     <tr>
                       <th class="text-uppercase text-xs text-center">Advertiser</th>
@@ -546,37 +575,38 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="text-xs text-center">1</td>
-                      <td class="text-xs text-center">John Doe</td>
-                      <td class="text-xs text-center">johndoe@example.com</td>
-                      <td class="text-xs text-center">(555) 123-4567</td>
-                      <td class="text-xs text-center">123 Main St</td>
-                      <td class="text-xs text-center">New York</td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Allegra K</a></td>
+                      <td class="text-xs text-center">2025-05-08 23:41:34</td>
+                      <td class="text-xs text-center">20042.6337.149694</td>
+                      <td class="text-xs text-center">$31.13</td>
+                      <td class="text-xs text-center">$3.74</td>
+                      <td class="text-xs text-center">Pending</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center">2</td>
-                      <td class="text-xs text-center">Jane Smith</td>
-                      <td class="text-xs text-center">janesmith@example.com</td>
-                      <td class="text-xs text-center">(555) 234-5678</td>
-                      <td class="text-xs text-center">456 Elm St</td>
-                      <td class="text-xs text-center">Los Angeles</td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Hilo</a></td>
+                      <td class="text-xs text-center">2025-04-26 22:46:59</td>
+                      <td class="text-xs text-center">18380.6325.91103</td>
+                      <td class="text-xs text-center">$168.98</td>
+                      <td class="text-xs text-center">$13.52</td>
+                      <td class="text-xs text-center">Pending</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center">3</td>
-                      <td class="text-xs text-center">Sam Johnson</td>
-                      <td class="text-xs text-center">samj@example.com</td>
-                      <td class="text-xs text-center">(555) 345-6789</td>
-                      <td class="text-xs text-center">789 Oak St</td>
-                      <td class="text-xs text-center">Chicago</td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Ethika</a></td>
+                      <td class="text-xs text-center">2025-04-21T03:16:26</td>
+                      <td class="text-xs text-center">1914318436692004864</td>
+                      <td class="text-xs text-center">$22.50</td>
+                      <td class="text-xs text-center">$0.00 </td>
+                      <td class="text-xs text-center">Paid</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
-
         </div>
       </div>
+
+
 
       <footer class="footer pt-3  ">
         <div class="container-fluid">
@@ -802,9 +832,8 @@
       const today = new Date();
       let start, end;
 
-      const format = (d) => `${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}, ${d.getFullYear()}`;
-      // Example: "May 8, 2025"
-
+      const format = (d) =>
+        `${d.toLocaleString('default', { month: 'long' })} ${d.getDate()}, ${d.getFullYear()}`;
 
       switch (value) {
         case "today":
@@ -845,14 +874,15 @@
 
       const formatted = `${format(start)} to ${format(end)}`;
 
-      // Change the selected option’s display text
+      // Update the dropdown button text
       const selectedOption = dateRangeSelect.options[dateRangeSelect.selectedIndex];
       selectedOption.text = formatted;
 
-      // Optional: Re-trigger the selection UI update
+      // Re-focus trick to reflect updated text
       dateRangeSelect.blur();
       dateRangeSelect.focus();
     });
+
   </script>
 
 

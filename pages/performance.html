@@ -186,7 +186,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Reports Management</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-toggle="collapse" href="#reportsMenu" role="button"
+          <a class="nav-link collapsed active" data-bs-toggle="collapse" href="#reportsMenu" role="button"
             aria-expanded="false" aria-controls="reportsMenu">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -206,13 +206,13 @@
           <div class="collapse show" id="reportsMenu">
             <ul class="nav ms-4 ps-3">
               <li class="nav-item">
-                <a class="nav-link active" href="./transactions.html">
+                <a class="nav-link" href="./transactions.html">
                   <span class="sidenav-mini-icon"> </span>
                   <span class="sidenav-normal"> Transactions </span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./performance.html">
+                <a class="nav-link active" href="./performance.html">
                   <span class="sidenav-mini-icon"> + </span>
                   <span class="sidenav-normal"> Performance </span>
                 </a>
@@ -410,7 +410,7 @@
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Reporting</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Transactions</h6>
+          <h6 class="font-weight-bolder mb-0">Advertisers Performance</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -424,6 +424,30 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
+      <div class="container">
+        <div class="d-flex justify-content-end"><a href="clicks.html" class="btn btn-secondary">Clicks Performance</a></div>
+      </div>
+
+      <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
+        <div class="col-4">
+          <select id="date-range" class="form-select form-select-sm">
+            <option value="" selected>Select Date Range</option>
+            <option value="today">Today</option>
+            <option value="yesterday">Yesterday</option>
+            <option value="last_7_days">Last 7 Days</option>
+            <option value="last_30_days">Last 30 Days</option>
+            <option value="this_month">This Month</option>
+            <option value="last_month">Last Month</option>
+            <option value="current_year">Current Year</option>
+            <option value="previous_year">Previous Year</option>
+          </select>
+        </div>
+
+        <button class="btn btn-sm btn-outline-success">
+          <i class="fa fa-upload me-2"></i>Export
+        </button>
+      </div>
+
       <div class="row mt-4 mt-md-0 mt-sm-0">
         <div class="col-lg-4 col-4 mb-md-4 mb-sm-4 mb-xs-4">
           <div class="card">
@@ -457,6 +481,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-4 col-4 mb-md-4 mb-sm-4 mb-xs-4">
           <div class="card">
             <span class="mask bg-dark opacity-10 border-radius-lg"></span>
@@ -524,30 +549,24 @@
       </div>
 
 
-      
+
 
       <!-- Graph Chart Start -->
       <div class="row my-4">
         <div class="col-lg-12">
           <div class="card z-index-2">
             <div class="card-header pb-0">
-              <div class="d-flex justify-content-between align-items-center flex-wrap">
-                <div>
-                  <h6>Sales overview</h6>
-                  <p class="text-sm mb-0">
-                    <i class="fa fa-arrow-up text-success"></i>
-                    <span class="font-weight-bold">4% more</span> in 2021
-                  </p>
-                </div>
+              <div class="d-flex justify-content-end align-items-center flex-wrap">
                 <div class="d-flex align-items-center mb-3 gap-3">
                   <div>
                     <label for="type-select" class="me-1 fw-bold">Data Type:</label>
                     <select id="type-select" class="form-select w-auto d-inline-block">
-                      <option value="Pending">Pending Commission</option>
-                      <option value="Approved">Approved Commission</option>
-                      <option value="Rejected">Rejected Commission</option>
-                      <option value="Tracked">Tracked Commission</option>
-                      <option value="Sales">Total Sales</option>
+                      <option value="All">All</option>
+                      <option value="Pending">Pending</option>
+                      <option value="Approved">Approved</option>
+                      <option value="Declined">Declined</option>
+                      <option value="Paid">Paid</option>
+                      <option value="PendingPaid">Pending Paid</option>
                     </select>
                   </div>
                 </div>
@@ -567,12 +586,9 @@
       <div class="row my-4">
         <div class="col-lg-12">
           <div class="card">
-            <div class="card-header bg-white text-white">
-              <h6>Advertisers Information</h6>
-            </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-striped table-hover">
                   <thead class="bg-dark text-white">
                     <tr>
                       <th class="text-uppercase text-xs text-center">Advertiser</th>
@@ -585,28 +601,28 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="text-xs text-center">1</td>
-                      <td class="text-xs text-center">John Doe</td>
-                      <td class="text-xs text-center">johndoe@example.com</td>
-                      <td class="text-xs text-center">(555) 123-4567</td>
-                      <td class="text-xs text-center">123 Main St</td>
-                      <td class="text-xs text-center">New York</td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Allegra K</a></td>
+                      <td class="text-xs text-center">2025-05-08 23:41:34</td>
+                      <td class="text-xs text-center">20042.6337.149694</td>
+                      <td class="text-xs text-center">$31.13</td>
+                      <td class="text-xs text-center">$3.74</td>
+                      <td class="text-xs text-center">Pending</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center">2</td>
-                      <td class="text-xs text-center">Jane Smith</td>
-                      <td class="text-xs text-center">janesmith@example.com</td>
-                      <td class="text-xs text-center">(555) 234-5678</td>
-                      <td class="text-xs text-center">456 Elm St</td>
-                      <td class="text-xs text-center">Los Angeles</td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Ethika</a></td>
+                      <td class="text-xs text-center">2025-04-21T03:16:26</td>
+                      <td class="text-xs text-center">1914318437044326400</td>
+                      <td class="text-xs text-center">$45.00</td>
+                      <td class="text-xs text-center">$0.00</td>
+                      <td class="text-xs text-center">Pending</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center">3</td>
-                      <td class="text-xs text-center">Sam Johnson</td>
-                      <td class="text-xs text-center">samj@example.com</td>
-                      <td class="text-xs text-center">(555) 345-6789</td>
-                      <td class="text-xs text-center">789 Oak St</td>
-                      <td class="text-xs text-center">Chicago</td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Hilo</a></td>
+                      <td class="text-xs text-center">2025-04-26 22:46:59</td>
+                      <td class="text-xs text-center">18380.6325.91103</td>
+                      <td class="text-xs text-center">$516.60</td>
+                      <td class="text-xs text-center">$41.32</td>
+                      <td class="text-xs text-center">Pending</td>
                     </tr>
                   </tbody>
                 </table>
