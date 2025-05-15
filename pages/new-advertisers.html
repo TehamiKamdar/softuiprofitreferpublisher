@@ -384,7 +384,8 @@
             <div class="col-6"><input type="search" name="" id="" class="form-control" placeholder="Search Advertiser">
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-              <button class="btn btn-outline-primary   dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-filter me-3"></i>Filter</button>
+              <button class="btn btn-outline-primary   dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false"><i class="fa fa-filter me-3"></i>Filter</button>
               <div class="dropdown-menu p-3" style="min-width: 250px;">
                 <label for="countryFilter" class="form-label mb-1">Select Country</label>
                 <select class="form-select" id="countryFilter">
@@ -421,7 +422,7 @@
 
                     <div class="modal-body">
                       <div class="px-2">
-                      <p>Which Format to Export Data in?</p>
+                        <p>Which Format to Export Data in?</p>
                         <select name="" id="" class="form-select">
                           <option value="Excel">Excel</option>
                           <option value="CSV">CSV</option>
@@ -454,9 +455,11 @@
 
                     <div class="w-screen h-screen p-4">
                       <p class="mb-4 text-xxs">
-                        We value our affiliates and expect them to promote advertisers responsibly while maintaining brand integrity.
+                        We value our affiliates and expect them to promote advertisers responsibly while maintaining
+                        brand integrity.
                       </p>
-                      <textarea class="w-full h-full p-2 text-sm rounded border" cols="50" rows="8" placeholder="Your message here..."></textarea>
+                      <textarea class="w-full h-full p-2 text-sm rounded border" cols="50" rows="8"
+                        placeholder="Your message here..."></textarea>
                     </div>
 
 
@@ -490,34 +493,43 @@
               </thead>
               <tbody>
                 <tr class="">
-                  <td class="text-center align-middle"><input class="multi-check" type="checkbox"></td>
+                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
                   <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">John Doe</a></td>
                   <td class="text-center text-xs">johndoe.com</td>
                   <td class="text-center text-xs">North</td>
                   <td class="text-center text-xs">10%</td>
                   <td class="text-center text-xs">30 days</td>
                   <td class="text-center text-xs">Yes</td>
-                  <td class="text-center align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i><div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">Apply</div></td>
+                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
+                    <div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">
+                      Apply</div>
+                  </td>
                 </tr>
                 <tr>
-                  <td class="text-center align-middle"><input class="multi-check" type="checkbox"></td>
+                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
                   <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">Jane Smith</a></td>
                   <td class="text-center text-xs">janesmith.com</td>
                   <td class="text-center text-xs">West</td>
                   <td class="text-center text-xs">12%</td>
                   <td class="text-center text-xs">45 days</td>
                   <td class="text-center text-xs">No</td>
-                  <td class="text-center align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i><div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">Apply</div></td>
+                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
+                    <div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">
+                      Apply</div>
+                  </td>
                 </tr>
                 <tr>
-                  <td class="text-center align-middle"><input class="multi-check" type="checkbox"></td>
+                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
                   <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">Sam Johnson</a></td>
                   <td class="text-center text-xs">samjohnson.com</td>
                   <td class="text-center text-xs">South</td>
                   <td class="text-center text-xs">8%</td>
                   <td class="text-center text-xs">15 days</td>
                   <td class="text-center text-xs">Yes</td>
-                  <td class="text-center align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i><div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">Apply</div></td>
+                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
+                    <div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">
+                      Apply</div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -646,13 +658,24 @@
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <script>
-   document.getElementById("selectAll").addEventListener("change", function () {
-      const checkboxes = document.querySelectorAll(".multi-check");
+    const selectAll = document.getElementById("selectAll");
+    const checkboxes = document.querySelectorAll(".multi-select");
+
+    selectAll.addEventListener("change", function () {
       checkboxes.forEach(checkbox => {
         checkbox.checked = this.checked;
       });
     });
 
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", function () {
+        if (!this.checked) {
+          selectAll.checked = false;
+        } else if (document.querySelectorAll(".multi-select:checked").length === checkboxes.length) {
+          selectAll.checked = true;
+        }
+      });
+    });
 
 
     var win = navigator.platform.indexOf('Win') > -1;

@@ -376,7 +376,7 @@
 
       <div class="card">
         <div class="card-header pb-0">
-          <h5 class="text-lg">My Advertisers</h5>
+          <h5 class="text-lg">Find Advertisers</h5>
         </div>
         <div class="col-12 my-3 px-4">
           <div class="row">
@@ -493,38 +493,38 @@
               </thead>
               <tbody>
                 <tr class="">
-                  <td class="text-center align-middle"><input class="multi-check" type="checkbox"></td>
+                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
                   <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">John Doe</a></td>
                   <td class="text-center text-xs">johndoe.com</td>
                   <td class="text-center text-xs">North</td>
                   <td class="text-center text-xs">10%</td>
                   <td class="text-center text-xs">30 days</td>
                   <td class="text-center text-xs">Yes</td>
-                  <td class="text-center align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
+                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
                     <div class="cursor-pointer badge bg-success">Joined</div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center align-middle"><input class="multi-check" type="checkbox"></td>
+                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
                   <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">Jane Smith</a></td>
                   <td class="text-center text-xs">janesmith.com</td>
                   <td class="text-center text-xs">West</td>
                   <td class="text-center text-xs">12%</td>
                   <td class="text-center text-xs">45 days</td>
                   <td class="text-center text-xs">No</td>
-                  <td class="text-center align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
+                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
                     <div class="cursor-pointer badge bg-success">Joined</div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center align-middle"><input class="multi-check" type="checkbox"></td>
+                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
                   <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">Sam Johnson</a></td>
                   <td class="text-center text-xs">samjohnson.com</td>
                   <td class="text-center text-xs">South</td>
                   <td class="text-center text-xs">8%</td>
                   <td class="text-center text-xs">15 days</td>
                   <td class="text-center text-xs">Yes</td>
-                  <td class="text-center align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
+                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
                     <div class="cursor-pointer badge bg-success">Joined</div>
                   </td>
                 </tr>
@@ -655,12 +655,25 @@
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <script>
-    document.getElementById("selectAll").addEventListener("change", function () {
-      const checkboxes = document.querySelectorAll(".multi-check");
+    const selectAll = document.getElementById("selectAll");
+    const checkboxes = document.querySelectorAll(".multi-select");
+
+    selectAll.addEventListener("change", function () {
       checkboxes.forEach(checkbox => {
         checkbox.checked = this.checked;
       });
     });
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", function () {
+        if (!this.checked) {
+          selectAll.checked = false;
+        } else if (document.querySelectorAll(".multi-select:checked").length === checkboxes.length) {
+          selectAll.checked = true;
+        }
+      });
+    });
+
 
 
 

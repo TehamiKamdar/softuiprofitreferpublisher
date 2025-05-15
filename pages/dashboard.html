@@ -911,14 +911,27 @@
 
 
   <script>
-    document.getElementById("selectAll").addEventListener("change", function () {
-      const checkboxes = document.querySelectorAll(".multi-select");
+    const selectAll = document.getElementById("selectAll");
+    const checkboxes = document.querySelectorAll(".multi-select");
+
+    selectAll.addEventListener("change", function () {
       checkboxes.forEach(checkbox => {
         checkbox.checked = this.checked;
       });
     });
 
-    
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener("change", function () {
+        if (!this.checked) {
+          selectAll.checked = false;
+        } else if (document.querySelectorAll(".multi-select:checked").length === checkboxes.length) {
+          selectAll.checked = true;
+        }
+      });
+    });
+
+
+
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {
