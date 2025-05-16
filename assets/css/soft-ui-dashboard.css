@@ -190,7 +190,7 @@
   box-sizing: border-box;
 }
 *::selection{
-  background-color: #ff7300;
+  background-color: #ff6c17;
   color: #fff;
 }
 @media (prefers-reduced-motion: no-preference) {
