@@ -425,7 +425,8 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="container">
-        <div class="d-flex justify-content-end"><a href="performance.html" class="btn btn-secondary">Advertisers Performance</a></div>
+        <div class="d-flex justify-content-end"><a href="performance.html" class="btn btn-secondary">Advertisers
+            Performance</a></div>
       </div>
 
       <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
@@ -443,9 +444,43 @@
           </select>
         </div>
 
-        <button class="btn btn-sm btn-outline-success">
-          <i class="fa fa-upload me-2"></i>Export
+        <!-- Export Button -->
+        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exportModal">
+          <i class="fa fa-file-export me-2"></i>Export
         </button>
+
+        <!-- Export Modal -->
+        <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+              <div class="modal-header">
+                <h5 class="modal-title" id="exportModalLabel">
+                  <i class="fa fa-file-export me-2 text-success"></i>Export Options
+                </h5>
+                <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                <p class="text-sm text-muted">
+                  After your request is completed, the formatted file you requested will be available for
+                  download in the <strong>Tools &gt; Download Export Files</strong> section.
+                </p>
+                <h6>Select the format in which you want to export the data:</h6>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
+                    CSV</button>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="row mt-4 mt-md-0 mt-sm-0">
@@ -456,7 +491,7 @@
               <div class="row">
                 <div class="col-8 text-start">
                   <div class="icon icon-shape bg-white shadow text-center border-radius-2xl">
-                    <i class="ni ni-cart text-dark text-gradient text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-hand-pointer   text-dark text-gradient text-lg opacity-10" aria-hidden="true"></i>
                   </div>
                   <h5 class="text-white font-weight-bolder mb-0 mt-3">
                     2300
@@ -519,7 +554,8 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">[Brazil] Iguatemi 365 - CPS</a></td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">[Brazil] Iguatemi
+                          365 - CPS</a></td>
                       <td class="text-xs text-center">2025-04-23</td>
                       <td class="text-xs text-center">10</td>
                       <td class="text-xs text-center">0</td>
@@ -527,7 +563,8 @@
                       <td class="text-xs text-center">10</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">[Brazil] Iguatemi 365 - CPS</a></td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">[Brazil] Iguatemi
+                          365 - CPS</a></td>
                       <td class="text-xs text-center">2025-04-21</td>
                       <td class="text-xs text-center">9</td>
                       <td class="text-xs text-center">0</td>
@@ -535,7 +572,8 @@
                       <td class="text-xs text-center">9</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">[Brazil] Iguatemi 365 - CPS</a></td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">[Brazil] Iguatemi
+                          365 - CPS</a></td>
                       <td class="text-xs text-center">2025-04-23</td>
                       <td class="text-xs text-center">1</td>
                       <td class="text-xs text-center">0</td>
@@ -672,68 +710,68 @@
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
   <script>
-  const ctx = document.getElementById('chart-line').getContext('2d');
+    const ctx = document.getElementById('chart-line').getContext('2d');
 
-  function getDaysInCurrentMonth() {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth();
-    const days = new Date(year, month + 1, 0).getDate();
+    function getDaysInCurrentMonth() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      const days = new Date(year, month + 1, 0).getDate();
 
-    const labels = [];
-    for (let i = 1; i <= days; i++) {
-      labels.push(`${i.toString().padStart(2, '0')}-${(month + 1).toString().padStart(2, '0')}`);
+      const labels = [];
+      for (let i = 1; i <= days; i++) {
+        labels.push(`${i.toString().padStart(2, '0')}-${(month + 1).toString().padStart(2, '0')}`);
+      }
+      return labels;
     }
-    return labels;
-  }
 
-  function generateDummyData(days) {
-    return Array.from({ length: days }, () => Math.floor(Math.random() * 100));
-  }
+    function generateDummyData(days) {
+      return Array.from({ length: days }, () => Math.floor(Math.random() * 100));
+    }
 
-  const labels = getDaysInCurrentMonth();
-  const daysCount = labels.length;
+    const labels = getDaysInCurrentMonth();
+    const daysCount = labels.length;
 
-  const data = generateDummyData(daysCount); // Just use one dataset
+    const data = generateDummyData(daysCount); // Just use one dataset
 
-  const chart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: labels,
-      datasets: [{
-        label: "Clicks",
-        data: data,
-        borderColor: "#f97316",
-        fill: false,
-        tension: 0.3,
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      scales: {
-        x: {
-          ticks: {
-            maxRotation: 90,
-            minRotation: 45
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "Clicks",
+          data: data,
+          borderColor: "#f97316",
+          fill: false,
+          tension: 0.3,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            ticks: {
+              maxRotation: 90,
+              minRotation: 45
+            }
+          },
+          y: {
+            beginAtZero: true
           }
-        },
-        y: {
-          beginAtZero: true
         }
       }
-    }
-  });
+    });
 
-  // Removed the dropdown event listener
-  // document.getElementById("type-select").addEventListener("change", function () {
-  //   const selectedType = this.value;
-  //   chart.data.datasets[0].label = selectedType + " Data";
-  //   chart.data.datasets[0].data = typeDataMap[selectedType];
-  //   chart.update();
-  // });
-</script>
+    // Removed the dropdown event listener
+    // document.getElementById("type-select").addEventListener("change", function () {
+    //   const selectedType = this.value;
+    //   chart.data.datasets[0].label = selectedType + " Data";
+    //   chart.data.datasets[0].data = typeDataMap[selectedType];
+    //   chart.update();
+    // });
+  </script>
 
   <script>
     $(document).ready(function () {

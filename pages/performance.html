@@ -445,9 +445,43 @@
             </select>
           </div>
 
-          <button class="btn btn-sm btn-outline-success">
-            <i class="fa fa-upload me-2"></i>Export
+          <!-- Export Button -->
+          <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exportModal">
+            <i class="fa fa-file-export me-2"></i>Export
           </button>
+
+          <!-- Export Modal -->
+          <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exportModalLabel">
+                    <i class="fa fa-file-export me-2 text-success"></i>Export Options
+                  </h5>
+                  <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                  <p class="text-sm text-muted">
+                    After your request is completed, the formatted file you requested will be available for
+                    download in the <strong>Tools &gt; Download Export Files</strong> section.
+                  </p>
+                  <h6>Select the format in which you want to export the data:</h6>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
+                      CSV</button>
+                  </div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -531,14 +531,63 @@
             <div class="card-header bg-white text-white">
               <h6>Overview</h6>
             </div>
-            <div class="d-flex justify-content-end mb-3">
-              <div class="col-3 me-3">
-                <select name="" id="" class="form-select">
-                  <option value=""></option>
-                </select>
-              </div>
-              <div class="col-2">
-                <button class="btn btn-outline-success"><i class="fa fa-upload me-3"></i>Export</button>
+            <div class="container">
+              <div class="col-12">
+                <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
+                  <div class="col-4">
+                    <select id="date-range" class="form-select form-select-sm">
+                      <option value="" selected>Select Date Range</option>
+                      <option value="today">Today</option>
+                      <option value="yesterday">Yesterday</option>
+                      <option value="last_7_days">Last 7 Days</option>
+                      <option value="last_30_days">Last 30 Days</option>
+                      <option value="this_month">This Month</option>
+                      <option value="last_month">Last Month</option>
+                      <option value="current_year">Current Year</option>
+                      <option value="previous_year">Previous Year</option>
+                    </select>
+                  </div>
+
+                  <!-- Export Button -->
+                  <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exportModal">
+                    <i class="fa fa-file-export me-2"></i>Export
+                  </button>
+
+                  <!-- Export Modal -->
+                  <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exportModalLabel">
+                            <i class="fa fa-file-export me-2 text-success"></i>Export Options
+                          </h5>
+                          <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+
+                          <p class="text-sm text-muted">
+                            After your request is completed, the formatted file you requested will be available for
+                            download in the <strong>Tools &gt; Download Export Files</strong> section.
+                          </p>
+                          <h6>Select the format in which you want to export the data:</h6>
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
+                              CSV</button>
+                          </div>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
             <div class="card-body">
@@ -562,7 +611,8 @@
                       <td class="text-xs text-center">4</td>
                     </tr>
                     <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">3wliners.com</a></td>
+                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">3wliners.com</a>
+                      </td>
                       <td class="text-xs text-center">0</td>
                       <td class="text-xs text-center">$0</td>
                       <td class="text-xs text-center">$0</td>
