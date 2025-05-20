@@ -29,7 +29,7 @@
   --bs-gray-700: #3f3f46;
   --bs-gray-800: #27272a;
   --bs-gray-900: #18181b;
-  --bs-primary: #02c0ce;
+  --bs-primary: #02cebd;
   --bs-secondary: #71717a;
   --bs-success: #22c55e;
   --bs-info: #0ea5e9;
@@ -191,8 +191,11 @@
 }
 
 *::selection {
-  background-color: #02c0ce;
-  color: #fff;
+  background-color: rgb(219, 248, 255);
+  color: #02c0ce;
+}
+.apexcharts-legend-marker {
+  border-radius: 50% !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -11329,6 +11332,9 @@ fieldset:disabled .btn {
 
 .bg-primary {
   background-color: #02c0ce !important;
+}
+.bg-primary-light {
+  background-color: #d4fcff !important;
 }
 
 .bg-purple{
