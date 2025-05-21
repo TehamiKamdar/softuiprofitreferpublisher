@@ -3803,6 +3803,12 @@ textarea.form-control.is-invalid {
   transition: all 0.15s ease-in;
 }
 
+.btn-hover:hover , .btn-hover:hover i{
+  background-color: #02c0ce !important;
+  color: #fff !important;
+  transition: 0.3s ease-in;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -21771,7 +21777,7 @@ fieldset:disabled .btn {
 
 .btn.btn-sm i,
 .btn-group-sm>.btn i {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .btn.btn-lg.btn-icon-only,
@@ -25135,7 +25141,7 @@ html {
   color: #71717a;
   padding: 0;
   margin: 0 3px;
-  border-radius: 50% !important;
+  border-radius: 0% !important;
   width: 36px;
   height: 36px;
   font-size: 0.875rem;

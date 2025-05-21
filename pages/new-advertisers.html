@@ -28,6 +28,9 @@
   <!-- Nucleo Icons -->
   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="../assets/remixicons-fonts/remixicon.css">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -39,11 +42,9 @@
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
-<style>
-</style>
 
-<body class="g-sidenav-show  bg-gray-100">
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
+<body class="g-sidenav-show bg-cyan-100" style="overflow-x: hidden;">
+  <aside class="bg-white sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl fixed-start"
     id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
@@ -375,16 +376,17 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
 
-      <div class="card">
+      <div class="card mb-3">
         <div class="card-header pb-0">
-          <h5 class="text-lg">New Advertisers</h5>
+          <h5 class="text-lg">My Advertisers</h5>
         </div>
         <div class="col-12 my-3 px-4">
           <div class="row">
-            <div class="col-6"><input type="search" name="" id="" class="form-control-sm" placeholder="Search Advertiser">
+            <div class="col-6"><input type="search" name="" id="" class="form-control-sm"
+                placeholder="Search Advertiser">
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-              <button class="btn btn-sm btn-outline-primary   dropdown-toggle" data-bs-toggle="dropdown"
+              <button class="btn btn-sm  btn-outline-primary mx-3 dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false"><i class="fa fa-filter me-2"></i>Filter</button>
               <div class="dropdown-menu p-3" style="min-width: 250px;">
                 <label for="countryFilter" class="form-label mb-1">Select Country</label>
@@ -408,69 +410,39 @@
                 </div>
               </div>
               <!-- Export Button -->
-                  <button class="btn btn-sm btn-outline-success mx-2" data-bs-toggle="modal" data-bs-target="#exportModal">
-                    <i class="fa fa-file-export me-2"></i>Export
-                  </button>
-
-                  <!-- Export Modal -->
-                  <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exportModalLabel">
-                            <i class="fa fa-file-export me-2 text-success"></i>Export Options
-                          </h5>
-                          <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-
-                          <p class="text-sm text-muted">
-                            After your request is completed, the formatted file you requested will be available for
-                            download in the <strong>Tools &gt; Download Export Files</strong> section.
-                          </p>
-                          <h6>Select the format in which you want to export the data:</h6>
-                          <div class="d-grid gap-2">
-                            <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
-                              CSV</button>
-                          </div>
-                        </div>
-
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-
-                      </div>
-                    </div>
-                  </div>
-              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
-                <i class="fa fa-plus me-2"></i>Apply
+              <button class="btn btn-sm btn-outline-success mx-2" data-bs-toggle="modal" data-bs-target="#exportModal">
+                <i class="fa fa-file-export me-2"></i>Export
               </button>
-              <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="exportModalLabel"
+
+              <!-- Export Modal -->
+              <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                   <div class="modal-content">
 
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exportModalLabel">Apply</h5>
-                      <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <h5 class="modal-title" id="exportModalLabel">
+                        <i class="fa fa-file-export me-2 text-success"></i>Export Options
+                      </h5>
+                      <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                     </div>
 
-                    <div class="w-screen h-screen p-4">
-                      <p class="mb-4 text-xxs">
-                        We value our affiliates and expect them to promote advertisers responsibly while maintaining
-                        brand integrity.
+                    <div class="modal-body">
+
+                      <p class="text-sm text-muted">
+                        After your request is completed, the formatted file you requested will be available for
+                        download in the <strong>Tools &gt; Download Export Files</strong> section.
                       </p>
-                      <textarea class="w-full h-full p-2 text-sm rounded border" cols="50" rows="8"
-                        placeholder="Your message here..."></textarea>
+                      <h6>Select the format in which you want to export the data:</h6>
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
+                          CSV</button>
+                      </div>
                     </div>
-
 
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                      <button type="button" class="btn btn-sm btn-primary">Apply</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
 
                   </div>
@@ -479,107 +451,326 @@
             </div>
           </div>
         </div>
-        <div class="card-body px-1 pt-0 pb-2">
-          <div class="table-responsive p-0">
-            <table class="table align-items-center mb-0 table-striped table-hover">
-              <thead>
-                <tr class="bg-dark text-center">
-                  <th class="text-center text-uppercase text-xs">
-                    <input id="selectAll" type="checkbox">
-                  </th>
-                  <th class="text-uppercase text-center text-xs">Advertisers</th>
-                  <th class="text-uppercase text-center text-xs">Advertisers URL</th>
-                  <th class="text-uppercase text-center text-xs">Region</th>
-                  <th class="text-uppercase text-center text-xs">Commission</th>
-                  <th class="text-uppercase text-center text-xs">Cookies</th>
-                  <th class="text-uppercase text-center text-xs">Deeplink</th>
-                  <th class="text-uppercase text-center text-center text-xs">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="">
-                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
-                  <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">John Doe</a></td>
-                  <td class="text-center text-xs">johndoe.com</td>
-                  <td class="text-center text-xs">North</td>
-                  <td class="text-center text-xs">10%</td>
-                  <td class="text-center text-xs">30 days</td>
-                  <td class="text-center text-xs">Yes</td>
-                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
-                    <div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">
-                      Apply</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
-                  <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">Jane Smith</a></td>
-                  <td class="text-center text-xs">janesmith.com</td>
-                  <td class="text-center text-xs">West</td>
-                  <td class="text-center text-xs">12%</td>
-                  <td class="text-center text-xs">45 days</td>
-                  <td class="text-center text-xs">No</td>
-                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
-                    <div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">
-                      Apply</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text-center align-middle"><input class="multi-select" type="checkbox"></td>
-                  <td class="text-center text-xs"><a href="view-advertiser.html" class="nav-link">Sam Johnson</a></td>
-                  <td class="text-center text-xs">samjohnson.com</td>
-                  <td class="text-center text-xs">South</td>
-                  <td class="text-center text-xs">8%</td>
-                  <td class="text-center text-xs">15 days</td>
-                  <td class="text-center text-xs">Yes</td>
-                  <td class="text-center text-xs align-middle"><i class="fa fa-eye text-lg text-dark me-3"></i>
-                    <div data-bs-toggle="modal" data-bs-target="#applyModal" class="cursor-pointer badge bg-primary">
-                      Apply</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+
       </div>
+      <div class="row">
 
-
-
-
-      <footer class="footer pt-3  ">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
+        <!-- Card 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Shopify Inc.</h5>
+                <a href="https://shopify.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">15 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">4.50%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/US/flat/24.png" title="USA" class="img-fluid cursor-pointer" alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
               </div>
             </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About
-                    Us</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
-                    target="_blank">License</a>
-                </li>
-              </ul>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Slack Technologies</h5>
+                <a href="https://slack.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">12 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">6.00%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/GB/flat/24.png" title="UK" class="img-fluid cursor-pointer" alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
+
+        <!-- Card 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Zoom Video</h5>
+                <a href="https://zoom.us" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">10 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">3.50%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/AU/flat/24.png" title="Australia" class="img-fluid cursor-pointer"
+                    alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Airbnb Inc.</h5>
+                <a href="https://airbnb.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">20 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">4.00%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/FR/flat/24.png" title="France" class="img-fluid cursor-pointer" alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Spotify AB</h5>
+                <a href="https://spotify.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">18 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">5.25%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/SE/flat/24.png" title="Sweden" class="img-fluid cursor-pointer" alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Uber Technologies</h5>
+                <a href="https://uber.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">14 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">3.75%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/BR/flat/24.png" title="Brazil" class="img-fluid cursor-pointer" alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Intel Corp.</h5>
+                <a href="https://intel.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">17 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">4.10%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/IN/flat/24.png" title="India" class="img-fluid cursor-pointer" alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <div class="mb-3">
+                <h5>Oracle Corp.</h5>
+                <a href="https://oracle.com" target="_blank" class="fw-semibold nav-link text-xs mt-2">
+                  <i class="ri-link-m" title="Visit Website"></i> Visit Website
+                </a>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <i class="ri-lg ri-wallet-3-line text-green cursor-pointer" title="Avg Payout Time"></i>
+                  <h6 class="text-xs">16 Days</h6>
+                </div>
+                <div class="col-6">
+                  <i class="ri-lg ri-coins-line text-golden cursor-pointer" title="Commission Rate"></i>
+                  <h6 class="text-xs">5.75%</h6>
+                </div>
+              </div>
+              <div class="row justify-content-center mb-3">
+                <div class="col-6">
+                  <span class="badge badge-sm bg-warning text-white text-xs cursor-pointer"
+                    title="Status">PENDING</span>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <img src="https://flagsapi.com/DE/flat/24.png" title="Germany" class="img-fluid cursor-pointer"
+                    alt="">
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-hover btn-sm btn-primary border border-primary border-radius-xl text-primary"
+                  style="background-color: rgb(219, 248, 255);">
+                  <i class="ri-xs ri-eye-line text-primary me-2" title="View Details"></i>View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </main>
   <div class="fixed-plugin">
