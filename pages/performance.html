@@ -378,60 +378,60 @@
       <div class="d-flex justify-content-end"><a href="clicks.html" class="btn btn-secondary">Clicks Performance</a>
       </div>
 
-        <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
-          <div class="col-4">
-            <select id="date-range" class="form-select form-select-sm">
-              <option value="" selected>Select Date Range</option>
-              <option value="today">Today</option>
-              <option value="yesterday">Yesterday</option>
-              <option value="last_7_days">Last 7 Days</option>
-              <option value="last_30_days">Last 30 Days</option>
-              <option value="this_month">This Month</option>
-              <option value="last_month">Last Month</option>
-              <option value="current_year">Current Year</option>
-              <option value="previous_year">Previous Year</option>
-            </select>
-          </div>
+      <div class="d-flex justify-content-end gap-2 mb-3 flex-wrap">
+        <div class="col-4">
+          <select id="date-range" class="form-select form-select-sm">
+            <option value="" selected>Select Date Range</option>
+            <option value="today">Today</option>
+            <option value="yesterday">Yesterday</option>
+            <option value="last_7_days">Last 7 Days</option>
+            <option value="last_30_days">Last 30 Days</option>
+            <option value="this_month">This Month</option>
+            <option value="last_month">Last Month</option>
+            <option value="current_year">Current Year</option>
+            <option value="previous_year">Previous Year</option>
+          </select>
+        </div>
 
-          <!-- Export Button -->
-          <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exportModal">
-            <i class="fa fa-file-export me-2"></i>Export
-          </button>
+        <!-- Export Button -->
+        <button class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#exportModal">
+          <i class="fa fa-file-export me-2"></i>Export
+        </button>
 
-          <!-- Export Modal -->
-          <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
+        <!-- Export Modal -->
+        <div class="modal fade" id="exportModal" tabindex="-1" aria-labelledby="exportModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exportModalLabel">
-                    <i class="fa fa-file-export me-2 text-success"></i>Export Options
-                  </h5>
-                  <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-                </div>
-
-                <div class="modal-body">
-                  <p class="text-sm text-muted">
-                    After your request is completed, the formatted file you requested will be available for
-                    download in the <strong>Tools &gt; Download Export Files</strong> section.
-                  </p>
-                  <h6>Select the format in which you want to export the data:</h6>
-                  <div class="d-grid gap-2">
-                    <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
-                      CSV</button>
-                  </div>
-                </div>
-
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-
+              <div class="modal-header">
+                <h5 class="modal-title" id="exportModalLabel">
+                  <i class="fa fa-file-export me-2 text-success"></i>Export Options
+                </h5>
+                <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
               </div>
+
+              <div class="modal-body">
+                <p class="text-sm text-muted">
+                  After your request is completed, the formatted file you requested will be available for
+                  download in the <strong>Tools &gt; Download Export Files</strong> section.
+                </p>
+                <h6>Select the format in which you want to export the data:</h6>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-outline-success"><i class="fa fa-file-csv me-2"></i>Export as
+                    CSV</button>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+
             </div>
           </div>
         </div>
-     
+      </div>
+
       <div class="row mt-4 mt-md-0 mt-sm-0">
         <div class="col-lg-4 col-4 mb-md-4 mb-sm-4 mb-xs-4">
           <div class="card">
@@ -576,52 +576,252 @@
 
 
       <div class="row my-4">
-        <div class="col-lg-12">
+        <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                  <thead class="bg-dark text-white">
-                    <tr>
-                      <th class="text-uppercase text-xs text-center">Advertiser</th>
-                      <th class="text-uppercase text-xs text-center">Date</th>
-                      <th class="text-uppercase text-xs text-center">Transaction ID</th>
-                      <th class="text-uppercase text-xs text-center">Sale Amount</th>
-                      <th class="text-uppercase text-xs text-center">Commission</th>
-                      <th class="text-uppercase text-xs text-center">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Allegra K</a></td>
-                      <td class="text-xs text-center">2025-05-08 23:41:34</td>
-                      <td class="text-xs text-center">20042.6337.149694</td>
-                      <td class="text-xs text-center">$31.13</td>
-                      <td class="text-xs text-center">$3.74</td>
-                      <td class="text-xs text-center">Pending</td>
-                    </tr>
-                    <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Ethika</a></td>
-                      <td class="text-xs text-center">2025-04-21T03:16:26</td>
-                      <td class="text-xs text-center">1914318437044326400</td>
-                      <td class="text-xs text-center">$45.00</td>
-                      <td class="text-xs text-center">$0.00</td>
-                      <td class="text-xs text-center">Pending</td>
-                    </tr>
-                    <tr>
-                      <td class="text-xs text-center"><a href="view-advertiser.html" class="nav-link">Hilo</a></td>
-                      <td class="text-xs text-center">2025-04-26 22:46:59</td>
-                      <td class="text-xs text-center">18380.6325.91103</td>
-                      <td class="text-xs text-center">$516.60</td>
-                      <td class="text-xs text-center">$41.32</td>
-                      <td class="text-xs text-center">Pending</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <table class="table table-responsive table-hover">
+                <thead>
+                  <tr>
+                    <th><small class="text-muted d-block text-xs fw-bold">Advertiser</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Transaction ID</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Date</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Sales Amount</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Comm. Amount</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Status</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Action</small></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="align-middle border-bottom">
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">Allegra K.</h6>
+                        <a href="#" class="fw-semibold nav-link text-xs mt-2"><i class="ri-link-m"></i>Visit
+                          Website</a>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">TXN10234</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">20-05-2025</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$1,250</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$37.5</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                          <h6 class="fw-semibold text-dark mt-2">Approved</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-nowrap" style="width: 1px;">
+                      <div class="d-flex gap-2">
+                        <a href="./view-advertiser.html" title="View">
+                          <i class="ri-lg ri-eye-line text-primary bg-primary-light border-radius-2xl p-2"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="align-middle border-bottom">
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">TechNova</h6>
+                        <a href="#" class="fw-semibold nav-link text-xs mt-2"><i class="ri-link-m"></i>Visit
+                          Website</a>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">TXN10235</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">21-05-2025</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$980</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$37.5</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <span class="rounded-circle bg-warning me-2" style="width:10px; height:10px;"></span>
+                          <h6 class="fw-semibold text-dark mt-2">Pending</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-nowrap" style="width: 1px;">
+                      <div class="d-flex gap-2">
+                        <a href="./view-advertiser.html" title="View">
+                          <i class="ri-lg ri-eye-line text-primary bg-primary-light border-radius-2xl p-2"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="align-middle border-bottom">
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">Digital Hive</h6>
+                        <a href="#" class="fw-semibold nav-link text-xs mt-2"><i class="ri-link-m"></i>Visit
+                          Website</a>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">TXN10235</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">22-05-2025</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$2,135</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$37.5</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <span class="rounded-circle bg-danger me-2" style="width:10px; height:10px;"></span>
+                          <h6 class="fw-semibold text-dark mt-2">Rejected</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-nowrap" style="width: 1px;">
+                      <div class="d-flex gap-2">
+                        <a href="./view-advertiser.html" title="View">
+                          <i class="ri-lg ri-eye-line text-primary bg-primary-light border-radius-2xl p-2"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="align-middle border-bottom">
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">GlowAds</h6>
+                        <a href="#" class="fw-semibold nav-link text-xs mt-2"><i class="ri-link-m"></i>Visit
+                          Website</a>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">TXN10237</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">23-05-2025</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$3,410</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$37.5</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <span class="rounded-circle bg-primary me-2" style="width:10px; height:10px;"></span>
+                          <h6 class="fw-semibold text-dark mt-2">Processing</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-nowrap" style="width: 1px;">
+                      <div class="d-flex gap-2">
+                        <a href="./view-advertiser.html" title="View">
+                          <i class="ri-lg ri-eye-line text-primary bg-primary-light border-radius-2xl p-2"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr class="align-middle border-bottom">
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">AdSmart</h6>
+                        <a href="#" class="fw-semibold nav-link text-xs mt-2"><i class="ri-link-m"></i>Visit
+                          Website</a>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">TXN10238</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">24-05-2025</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$890</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <h6 class="fw-semibold text-dark mt-2">$37.5</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <div class="d-flex align-items-center">
+                          <span class="rounded-circle bg-secondary me-2" style="width:10px; height:10px;"></span>
+                          <h6 class="fw-semibold text-dark mt-2">Failed</h6>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-nowrap" style="width: 1px;">
+                      <div class="d-flex gap-2">
+                        <a href="./view-advertiser.html" title="View">
+                          <i class="ri-lg ri-eye-line text-primary bg-primary-light border-radius-2xl p-2"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <div id="custom-length-container" class="mb-3"></div>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -822,23 +1022,27 @@
   <script>
     $(document).ready(function () {
       $('.table').DataTable({
-        dom: "ftlp",
-        pageLength: 25,
-        lengthMenu: [25, 50, 100, 250, 500],
+        paging: true,
+        searching: true,
+        lengthChange: true,
+        info: true,
+        ordering: false,
+        dom: '<"d-flex justify-content-between align-items-center mb-3"f>t<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
         language: {
-          search: '',
-          lengthMenu: "_MENU_",
           paginate: {
-            previous: '<i class="fa fa-arrow-left"></i>',
-            next: '<i class="fa fa-arrow-right"></i>'
-          }
-        }, initComplete: function () {
-          // Apply Bootstrap class col-1
-          $('.dataTables_length select').removeClass('form-select');
-        }
+            previous: '<i class="ri-arrow-left-double-line"></i>',
+            next: '<i class="ri-arrow-right-double-line"></i>'
+          },
+          lengthMenu: "_MENU_"
+        },
+        pageLength: 25
+        // t = table body only
+        // <"class"ip> = info + pagination inside div left aligned, with margin-top
       });
-      $('.dataTables_filter input[type="search"]').attr('placeholder', 'Search by id, name etc...');
+      $('.dataTables_info').addClass('text-xs')
+      $('.dataTables_length label select').removeClass('form-select')
     });
+
 
   </script>
   <script>
