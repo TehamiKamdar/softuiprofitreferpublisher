@@ -42,7 +42,27 @@
   <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
+<style>
+    .payment-option {
+    margin-bottom: 1rem;
+  }
 
+  .payment-label {
+    display: flex;
+    padding: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #f9f9f9;
+  }
+
+  .payment-option input:checked+.payment-label {
+    border-color: #007bff;
+    background-color: #e7f1ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+  }
+</style>
 <body class="g-sidenav-show bg-cyan-100" style="overflow-x: hidden;">
   <aside class="bg-white sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl fixed-start"
     id="sidenav-main">
@@ -1050,7 +1070,7 @@
               <div class="card-body border-top">
                 <h6>Payment Methods</h6>
                 <p class="text-xs">Select your active payment method where you want to withdraw funds.</p>
-                <div class="col-12">
+                <div class="col-12 mt-4">
                   <form>
                     <div class="payment-option">
                       <input type="radio" id="bank" name="payment" value="bank" hidden>
