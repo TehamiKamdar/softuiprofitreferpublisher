@@ -694,14 +694,15 @@
     // Copy link functionality
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', function () {
-        const link = this.previousElementSibling.textContent;
+        const link = this.closest('a').textContent.trim(); // Get full link text
         navigator.clipboard.writeText(link);
 
-        // Show tooltip feedback
-        const tooltip = new bootstrap.Tooltip(this, {
+        // Initialize tooltip if not already
+        const tooltip = bootstrap.Tooltip.getInstance(this) || new bootstrap.Tooltip(this, {
           title: 'Copied!',
           trigger: 'manual'
         });
+
         tooltip.show();
 
         setTimeout(() => {
@@ -709,6 +710,7 @@
         }, 1000);
       });
     });
+
 
     // Initialize tooltips
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
