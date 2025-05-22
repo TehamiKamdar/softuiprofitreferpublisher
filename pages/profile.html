@@ -808,120 +808,47 @@
               </div>
             </div>
             <div class="card-body">
-              <div class="col-12 mb-4">
-                <table class="table table-responsive table-hover">
-                  <thead class="bg-dark">
-                    <tr>
-                      <th class="text-center text-xs text-uppercase">Name</th>
-                      <th class="text-center text-xs text-uppercase">type</th>
-                      <th class="text-center text-xs text-uppercase">category</th>
-                      <th class="text-center text-xs text-uppercase">last updated</th>
-                      <th class="text-center text-xs text-uppercase">status</th>
-                      <th class="text-center text-xs text-uppercase">action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-xs text-center"><a href="https://bajideals.com" class="nav-link">bajideals.com</a>
-                      </td>
-                      <td class="text-xs text-center">Coupon / Deals, Content / Blogs / Reviews</td>
-                      <td class="text-xs text-center">Other</td>
-                      <td class="text-xs text-center">02/26/2025</td>
-                      <td class="text-xs text-center"><span class="badge bg-success">Active</span></td>
-                      <td class="text-xs text-center">
-                        <span class="badge bg-secondary cursor-pointer" data-bs-toggle="modal"
-                          data-bs-target="#editModal">
-                          Edit
-                        </span>
-                      </td>
-                      <!-- Edit Modal -->
-                      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-xl"> <!-- modal-sm for small size -->
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="editModalLabel">Edit Website Details</h5>
-                              <button type="button" class="btn bg-danger btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row mb-4">
-                                  <div class="col-6">
-                                    <label for="" class="form-label text-sm">Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter Name" required>
-                                  </div>
-                                  <div class="col-6">
-                                    <label for="" class="form-label text-sm">URL</label>
-                                    <input type="text" class="form-control" placeholder="Enter URL" required>
-                                  </div>
-                                </div>
-
-                                <div class="row mb-4">
-                                  <div class="col-4">
-                                    <label for="" class="form-label text-sm">Monthly Traffic</label>
-                                    <input type="text" name="" id="" class="form-control"
-                                      placeholder="Enter Monthly Traffic" required>
-                                  </div>
-                                  <div class="col-4">
-                                    <label for="" class="form-label text-sm">Monthly Page Views</label>
-                                    <input type="text" name="" id="" class="form-control"
-                                      placeholder="Enter Monthly Page Views" required>
-                                  </div>
-                                  <div class="col-4">
-                                    <label for="" class="form-label text-sm">Country</label>
-                                    <select name="" id="" class="form-select">
-                                      <option value="" disabled selected>Select Country</option>
-                                    </select>
-                                  </div>
-                                </div>
-
-                                <div class="row mb-4">
-                                  <div class="col-12">
-
-                                    <label for="">Website Type</label>
-                                    <select name="" id="" class="form-control" multiple="multiple">
-                                      <option value="">Website Type</option>
-                                      <option value="">Website Type</option>
-                                      <option value="">Website Type</option>
-                                      <option value="">Website Type</option>
-                                    </select>
-                                  </div>
-                                </div>
-                                <div class="row mb-4">
-                                  <div class="col-12">
-
-                                    <label for="">Category (Max 4)</label>
-                                    <select name="" id="" class="form-control" multiple="multiple">
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                      <option value="">Category</option>
-                                    </select>
-                                  </div>
-                                </div>
-
-                                <div class="row mb-4">
-                                  <div class="col-12"><textarea name="" id="" placeholder="Website Introduction Here"
-                                      required class="form-control"></textarea></div>
-                                </div>
-
-                                <button type="submit" class="btn btn-sm btn-primary w-100">Save Changes</button>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
+              <table class="table table-responsive table-hover">
+                <tbody>
+                  <tr class="align-middle border-bottom">
+                    <td>
+                      <div>
+                        <small class="text-muted d-block text-xs fw-bold">Name</small>
+                        <h6 class="fw-semibold text-dark mt-2">Baji Deals</h6>
+                        <a href="#" class="fw-semibold nav-link text-xs mt-2"><i class="ri-link-m"></i>Visit Website</a>
                       </div>
-
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                    </td>
+                    <td>
+                      <div>
+                        <small class="text-muted d-block text-xs fw-bold mb-1">Type</small>
+                          <span class="badge bg-primary me-2">Coupon / Deals</span>
+                          <span class="badge bg-primary me-2">Content / Blogs / Reviews</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <small class="text-muted d-block text-xs fw-bold">Category</small>
+                        <h6 class="fw-semibold text-dark mt-2">Others</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <small class="text-muted d-block text-xs fw-bold">Last Updated</small>
+                          <h6 class="fw-semibold text-dark mt-2">2/26/2023</h6>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <small class="text-muted d-block text-xs fw-bold mb-1">Status</small>
+                        <span class="badge bg-success">Active</span>
+                      </div>
+                    </td>
+                    <td style="width: 30px;">
+                      <i class="ri-lg ri-file-edit-line bg-yellow-light text-golden rounded-circle p-3 cursor-pointer"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
