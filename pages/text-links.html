@@ -380,145 +380,130 @@
       <h5 class="text-end text-sm">Total Results: <span class="text-sm">2957</span></h5>
 
 
-      <div class="card">
-        <div class="card-body p-0">
-          <div class="col-12">
+      <div class="row my-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" name="" id="selectAll" class=""></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Advertiser</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Website Url</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Tracking Link</small></th>
+                    <th><small class="text-muted d-block text-xs fw-bold">Short Link</small></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Advertiser 1 -->
+                  <tr>
+                    <td>
+                      <input type="checkbox" class=" multi-select">
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
 
-            <div class="container mt-4">
-              <div class="col-12">
-                <div class="row mb-3">
-                  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <div>
+                          <div class="fw-bold">Amazon</div>
+                          <small class="text-muted">ID: AMZ-001</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="link-cell">
+                      <a href="https://www.amazon.com" target="_blank" class="nav-link text-sm">amazon.com</a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://track.mysite.com/amz?ref=12345 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://mysite.link/amz123 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                  </tr>
 
-                    <!-- Search Box -->
-                    <div class="position-relative">
-                      <input type="search" class="form-control form-control-sm ps-5"
-                        placeholder="Search by id, name etc...">
-                      <i class="ri-search-line position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                    </div>
-                  </div>
-                </div>
+                  <!-- Advertiser 2 -->
+                  <tr>
+                    <td>
+                      <input type="checkbox" class=" multi-select">
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
 
-              </div>
+                        <div>
+                          <div class="fw-bold">eBay</div>
+                          <small class="text-muted">ID: EBY-002</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="link-cell">
+                      <a href="https://www.ebay.com" target="_blank" class="nav-link text-sm">ebay.com</a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://track.mysite.com/eby?ref=54321 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://mysite.link/eby543 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                  </tr>
+                  <!-- Advertiser 3 -->
+                  <tr>
+                    <td>
+                      <input type="checkbox" class=" multi-select">
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+
+                        <div>
+                          <div class="fw-bold">Best Buy</div>
+                          <small class="text-muted">ID: BBY-003</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="link-cell">
+                      <a href="https://www.bestbuy.com" target="_blank" class="nav-link text-sm">bestbuy.com</a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://track.mysite.com/bby?ref=98765 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://mysite.link/bby987 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                  </tr>
+
+                  <!-- Advertiser 4 -->
+                  <tr>
+                    <td>
+                      <input type="checkbox" class=" multi-select">
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+
+                        <div>
+                          <div class="fw-bold">Walmart</div>
+                          <small class="text-muted">ID: WMT-004</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="link-cell">
+                      <a href="https://www.walmart.com" target="_blank" class="nav-link text-sm">walmart.com</a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://track.mysite.com/wmt?ref=45678 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                    <td class="link-cell">
+                      <a href="#" class="nav-link text-sm">https://mysite.link/wmt456 <i
+                          class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <table class="table table-hover mb-0">
-              <thead>
-                <tr>
-                  <th><input type="checkbox" name="" id="selectAll" class=""></th>
-                  <th><small class="text-muted d-block text-xs fw-bold">Advertiser</small></th>
-                  <th><small class="text-muted d-block text-xs fw-bold">Website Url</small></th>
-                  <th><small class="text-muted d-block text-xs fw-bold">Tracking Link</small></th>
-                  <th><small class="text-muted d-block text-xs fw-bold">Short Link</small></th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Advertiser 1 -->
-                <tr>
-                  <td>
-                    <input type="checkbox" class=" multi-select">
-                  </td>
-                  <td>
-                    <div class="d-flex align-items-center">
-
-                      <div>
-                        <div class="fw-bold">Amazon</div>
-                        <small class="text-muted">ID: AMZ-001</small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="link-cell">
-                    <a href="https://www.amazon.com" target="_blank" class="nav-link text-sm">amazon.com</a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://track.mysite.com/amz?ref=12345 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://mysite.link/amz123 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                </tr>
-
-                <!-- Advertiser 2 -->
-                <tr>
-                  <td>
-                    <input type="checkbox" class=" multi-select">
-                  </td>
-                  <td>
-                    <div class="d-flex align-items-center">
-
-                      <div>
-                        <div class="fw-bold">eBay</div>
-                        <small class="text-muted">ID: EBY-002</small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="link-cell">
-                    <a href="https://www.ebay.com" target="_blank" class="nav-link text-sm">ebay.com</a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://track.mysite.com/eby?ref=54321 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://mysite.link/eby543 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                </tr>
-                <!-- Advertiser 3 -->
-                <tr>
-                  <td>
-                    <input type="checkbox" class=" multi-select">
-                  </td>
-                  <td>
-                    <div class="d-flex align-items-center">
-
-                      <div>
-                        <div class="fw-bold">Best Buy</div>
-                        <small class="text-muted">ID: BBY-003</small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="link-cell">
-                    <a href="https://www.bestbuy.com" target="_blank" class="nav-link text-sm">bestbuy.com</a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://track.mysite.com/bby?ref=98765 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://mysite.link/bby987 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                </tr>
-
-                <!-- Advertiser 4 -->
-                <tr>
-                  <td>
-                    <input type="checkbox" class=" multi-select">
-                  </td>
-                  <td>
-                    <div class="d-flex align-items-center">
-
-                      <div>
-                        <div class="fw-bold">Walmart</div>
-                        <small class="text-muted">ID: WMT-004</small>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="link-cell">
-                    <a href="https://www.walmart.com" target="_blank" class="nav-link text-sm">walmart.com</a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://track.mysite.com/wmt?ref=45678 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                  <td class="link-cell">
-                    <a href="#" class="nav-link text-sm">https://mysite.link/wmt456 <i
-                        class="fas fa-copy copy-btn ms-2 cursor-pointer" title="Copy link"></i></a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
@@ -649,11 +634,11 @@
     $(document).ready(function () {
       $('.table').DataTable({
         paging: true,
-        searching: false,
+        searching: true,
         lengthChange: true,
         info: true,
         ordering: false,
-        dom: 't<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
+        dom: '<"d-flex justify-content-between align-items-center mb-3"f>t<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
         language: {
           paginate: {
             previous: '<i class="ri-arrow-left-double-line"></i>',
@@ -671,7 +656,6 @@
 
 
   </script>
-
   <script>
     const selectAll = document.getElementById("selectAll");
     const checkboxes = document.querySelectorAll(".multi-select");

@@ -499,14 +499,7 @@
             <div class="container">
               <div class="col-12">
                 <div class="row mb-3">
-                  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-
-                    <!-- Search Box -->
-                    <div class="position-relative">
-                      <input type="search" class="form-control form-control-sm ps-5"
-                        placeholder="Search by id, name etc...">
-                      <i class="ri-search-line position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
-                    </div>
+                  <div class="d-flex justify-content-end align-items-center flex-wrap gap-2">
 
 
                     <!-- Filter + Export Buttons -->
@@ -970,11 +963,11 @@
     $(document).ready(function () {
       $('.table').DataTable({
         paging: true,
-        searching: false,
+        searching: true,
         lengthChange: true,
         info: true,
         ordering: false,
-        dom: 't<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
+        dom: '<"d-flex justify-content-between align-items-center mb-3"f>t<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
         language: {
           paginate: {
             previous: '<i class="ri-arrow-left-double-line"></i>',
