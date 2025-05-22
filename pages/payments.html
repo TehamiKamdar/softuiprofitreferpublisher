@@ -386,24 +386,351 @@
         </div>
         <div class="card-body p-3">
           <div class="table-responsive">
-            <table class="table table-striped table-hover align-middle text-center">
-              <thead class="table-dark">
+            <table class="table table-hover">
+              <thead>
                 <tr>
-                  <th class="text-uppercase text-xs">Invoice#</th>
-                  <th class="text-uppercase text-xs">Date</th>
-                  <th class="text-uppercase text-xs">Payment ID</th>
-                  <th class="text-uppercase text-xs">Method</th>
-                  <th class="text-uppercase text-xs">Amount</th>
-                  <th class="text-uppercase text-xs">LC Revshare</th>
-                  <th class="text-uppercase text-xs">Paid Amount</th>
-                  <th class="text-uppercase text-xs">Paid Date</th>
-                  <th class="text-uppercase text-xs">Status</th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Invoice#</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Date</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Payment ID</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Method</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Amount</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">LC Revshare</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Paid Amount</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Paid Date</small></th>
+                  <th><small class="text-muted d-block text-xs fw-bold">Status</small></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="text-center text-xs" colspan="9">No Payments Found</td>
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1001</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">01-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-778899</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">Bank Transfer</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$1,000</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$100</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$900</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">03-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
                 </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1002</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">02-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-223344</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PayPal</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$2,500</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$250</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$2,250</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">04-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1003</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">04-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-112233</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">Stripe</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$850</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$85</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$765</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">05-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1004</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">06-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-998877</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">Cash</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$1,750</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$175</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$1,575</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">07-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1005</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">08-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-334455</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">UPI</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$600</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$60</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$540</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">09-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1006</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">10-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-556677</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">Bank Transfer</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$3,200</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$320</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$2,880</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">11-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1007</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">12-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-121212</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PayPal</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$950</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$95</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$855</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">13-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1008</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">14-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-445566</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">Stripe</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$1,300</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$130</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$1,170</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">15-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1009</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">16-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-667788</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">Cash</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$700</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$70</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$630</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">17-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="align-middle border-bottom">
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">INV-1010</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">18-05-2025</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">PAY-889900</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">UPI</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$2,150</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$215</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">$1,935</h6>
+                  </td>
+                  <td>
+                    <h6 class="fw-semibold text-dark mt-2">19-05-2025</h6>
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="rounded-circle bg-success me-2" style="width:10px; height:10px;"></span>
+                      <h6 class="fw-semibold text-dark mt-2">Paid</h6>
+                    </div>
+                  </td>
+                </tr>
+
               </tbody>
             </table>
           </div>
@@ -537,92 +864,28 @@
   <script>
     $(document).ready(function () {
       $('.table').DataTable({
-        pageLength: 25,
-        lengthMenu: [25, 50, 100, 250, 500],
+        paging: true,
+        searching: false,
+        lengthChange: true,
+        info: true,
+        ordering: false,
+        dom: 't<"d-flex justify-content-between align-items-center mt-2"<\'length-wrapper\'l><\'info-wrapper\'i><\'pagination-wrapper\'p>>',
         language: {
           paginate: {
-            previous: '<i class="fa fa-arrow-left"></i>',
-            next: '<i class="fa fa-arrow-right"></i>'
-          }
-        }
-      });
-      $('.dataTables_filter input[type="search"]').attr('placeholder', 'Search by id, name etc...');
-    });
-
-  </script>
-
-  <script>
-    const ctx = document.getElementById('chart-line').getContext('2d');
-
-    const typeDataMap = {
-      Pending: [],
-      Approved: [],
-      Rejected: [],
-      Tracked: [],
-      Sales: []
-    };
-
-    function getDaysInCurrentMonth() {
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = now.getMonth();
-      const days = new Date(year, month + 1, 0).getDate();
-
-      const labels = [];
-      for (let i = 1; i <= days; i++) {
-        labels.push(`${i.toString().padStart(2, '0')}-${(month + 1).toString().padStart(2, '0')}`);
-      }
-      return labels;
-    }
-
-    function generateDummyData(days) {
-      return Array.from({ length: days }, () => Math.floor(Math.random() * 100));
-    }
-
-    const labels = getDaysInCurrentMonth();
-    const daysCount = labels.length;
-
-    // Generate dummy data for each type
-    for (let type in typeDataMap) {
-      typeDataMap[type] = generateDummyData(daysCount);
-    }
-
-    let chart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: "Pending",
-          data: typeDataMap["Pending"],
-          borderColor: "#381700",
-          fill: false,
-          tension: 0.3,
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            ticks: {
-              maxRotation: 90,
-              minRotation: 45
-            }
+            previous: '<i class="ri-arrow-left-double-line"></i>',
+            next: '<i class="ri-arrow-right-double-line"></i>'
           },
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
+          lengthMenu: "_MENU_"
+        },
+        pageLength: 25
+        // t = table body only
+        // <"class"ip> = info + pagination inside div left aligned, with margin-top
+      });
+      $('.dataTables_info').addClass('text-xs')
+      $('.dataTables_length label select').removeClass('form-select')
     });
 
-    document.getElementById("type-select").addEventListener("change", function () {
-      const selectedType = this.value;
-      chart.data.datasets[0].label = selectedType + " Data";
-      chart.data.datasets[0].data = typeDataMap[selectedType];
-      chart.update();
-    });
+
   </script>
 
 
